@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-primary fixed-top navbar-expand-sm">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="/">File Manager</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbar">
+			<div class="navbar-nav me-auto">
+				{{#eachpath path}}
+					<a class="nav-item nav-link{{#if current}} active{{/if}}" href="{{path}}">{{name}}</a>
+				{{/eachpath}}
+			</div>
+			<div class="navbar-nav">
+                <form action="" >
+                    <div >
+                        <input class="form-control" name="search" type="text" id="search-folder" placeholder="search-name" required />
+                    </div>
+                </form>
+			</div>
+		</div>
+	</div>
+</nav>

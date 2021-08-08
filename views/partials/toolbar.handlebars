@@ -1,0 +1,41 @@
+<nav class="navbar navbar-light bg-light fixed-bottom">
+	<div class="container-fluid px-2">
+		<div class="d-flex">
+			<div class="btn-group me-2" role="group">
+				<a class="btn btn-primary" href="@mkfile" data-bs-toggle="modal" data-bs-target="#mkfile" title="Create a file" data-bs-placement="top">
+					{{octicon "file-directory"}}
+					<span class="d-none d-sm-inline">New File</span>
+				</a>
+				<a class="btn btn-secondary" href="@mkdir" data-bs-toggle="modal" data-bs-target="#mkdir" title="Create a new folder" data-bs-placement="top">
+					{{octicon "file-directory"}}
+					<span class="d-none d-md-inline">New folder</span>
+				</a>
+			</div>
+			{{#either cmdable shellable}}
+			<div class="btn-group me-2" role="group">
+				
+			</div>
+			{{/either}}
+			<div class="btn-group me-2" role="group">
+				<a class="btn btn-success" href="@rename" data-bs-toggle="modal" data-bs-target="#rename" title="Rename file" data-bs-placement="top">
+					{{octicon "file-directory"}}
+					<span class="d-none d-md-inline">Rename</span>
+				</a>
+			</div>
+			<div class="btn-group me-2" role="group">
+				<a class="btn btn-danger" href="@delete" data-bs-toggle="modal" data-bs-target="#delete" title="Delete selected files" data-bs-placement="top">
+					{{octicon "trashcan"}}
+					<span class="d-none d-md-inline">Delete</span>
+				</a>
+			</div>
+		</div>
+		<div class="d-flex">
+			<div class="btn-group ms-2" role="group">
+				<a class="btn btn-warning" href="./" title="Refresh list" data-bs-placement="top">
+					{{octicon "sync"}}
+					<span class="d-none d-lg-inline">Refresh</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>
